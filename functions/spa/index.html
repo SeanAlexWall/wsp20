@@ -12,16 +12,36 @@
   </head>
   <body>
     <h1>Welcome to my front page!!!</h1>
+    <div id="contentOG"></div>
     <div id="content"></div>
-
     <!-- Optional JavaScript -->
     <script>
-      const contentTag = document.getElementById("content");
-      contentTag.innerHTML = "Written by JavaScript on front end! WOWW! <br>";
+      const contentTagOG = document.getElementById("contentOG");
+      contentTagOG.innerHTML = "Written by JavaScript on front end! WOWW! <br>";
       const n = Math.random() * 1000;
       const integer = Math.floor(n);
-      contentTag.innerHTML += ` Your Lucky Number is ${integer}`;
+      contentTagOG.innerHTML += ` Your Lucky Number is ${integer}`;
+      contentTagOG.innerHTML += "<br> ------------------------------------------------------------------<br>"
     </script>
+    <script>
+      window.onload = function(){
+        const currentPath = window.location.pathname;
+        console.log("currentPath = ", currentPath);
+        const pageContent = document.getElementById("content")
+        
+        if(currentPath === "/"){
+          pageContent.innerHTML = "<h1>Root Page</h1>";
+        }
+        else if(currentPath === "/home"){
+          pageContent.innerHTML = "<h1>home Page</h1>";
+        }
+        else if(currentPath === "/login"){
+          pageContent.innerHTML = "<h1>login Page</h1>";
+        }
+
+      }
+    </script>
+
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
