@@ -13,6 +13,7 @@ app.get('/b', backendHandler)
 
 function frontendHandler(request, response) {
     response.sendFile(__dirname + "/spa/index.html");
+    
 }
 
 function backendHandler(request, response){
