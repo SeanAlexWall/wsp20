@@ -23,11 +23,14 @@
       contentTagOG.innerHTML += ` Your Lucky Number is ${integer}`;
       contentTagOG.innerHTML += "<br> ------------------------------------------------------------------<br>"
     </script>
+
+    <script src="js/login_page.js"></script>
     <script>
+      const pageContent = document.getElementById("content");
       window.onload = function(){
         const currentPath = window.location.pathname;
         console.log("currentPath = ", currentPath);
-        const pageContent = document.getElementById("content")
+        
         
         if(currentPath === "/"){
           pageContent.innerHTML = "<h1>Root Page</h1>";
@@ -36,7 +39,7 @@
           pageContent.innerHTML = "<h1>home Page</h1>";
         }
         else if(currentPath === "/login"){
-          pageContent.innerHTML = "<h1>login Page</h1>";
+          login_page();
         }
 
       }
