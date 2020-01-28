@@ -11,20 +11,13 @@
     <title>My Front End</title>
   </head>
   <body>
-    <h1>Welcome to my front page!!!</h1>
-    <div id="contentOG"></div>
+    <div align='center'>
     <div id="content"></div>
     <!-- Optional JavaScript -->
-    <script>
-      const contentTagOG = document.getElementById("contentOG");
-      contentTagOG.innerHTML = "Written by JavaScript on front end! WOWW! <br>";
-      const n = Math.random() * 1000;
-      const integer = Math.floor(n);
-      contentTagOG.innerHTML += ` Your Lucky Number is ${integer}`;
-      contentTagOG.innerHTML += "<br> ------------------------------------------------------------------<br>"
-    </script>
 
     <script src="js/login_page.js"></script>
+    <script src="js/rps.js"></script>
+
     <script>
       const pageContent = document.getElementById("content");
       window.onload = function(){
@@ -41,6 +34,20 @@
         else if(currentPath === "/login"){
           login_page();
         }
+        else if(currentPath === "/rps" || currentPath === "/rps1" || currentPath === "/rps2" || currentPath === "/rps3"){
+          if(currentPath === "/rps"){
+            rps(0);
+          }
+          else if(currentPath === "/rps1"){
+            rps(1);
+          }
+          else if(currentPath === "/rps2"){
+            rps(2);
+          }
+          else if(currentPath === "/rps3"){
+            rps(3);
+          }
+        }
 
       }
     </script>
@@ -49,5 +56,6 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </div>
   </body>
 </html>
