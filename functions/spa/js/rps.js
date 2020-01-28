@@ -18,7 +18,7 @@ function rps(choice){
         console.log(n);
         outcome = decide(choice, n);
 
-
+ 
         switch(outcome){
             case "won":
                 pageContent.innerHTML += "<h2 class='text-success'> You Won!</h2><br>"

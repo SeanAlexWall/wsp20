@@ -52,6 +52,7 @@ function backendHandler(request, response){
     const n = Math.random();
     const num = Math.floor(n*10);
     //in c++, I'd just have 'int s, p, d, q;'
+     
     let s = 0; let p = 0; let d = 0; let q = 0;
     s = 36 + 5;
     p = 36 * 5;
